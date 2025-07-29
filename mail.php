@@ -20,14 +20,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';         // SMTP server (e.g., smtp.gmail.com)
         $mail->SMTPAuth = true;
-        $mail->Username = 'talha.jcodex@gmail.com';  // Your Gmail
-        $mail->Password = 'ccbl hfww jxhv einj';     // App password from Google
+        $mail->Username = 'your_email_address';  // Your Gmail
+        $mail->Password = 'your_app_password';     // App password from Google
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Recipients
         $mail->setFrom($email, $name);
-        $mail->addAddress('talha.jcodex@gmail.com'); // Where you want to receive
+        $mail->addAddress('add_address'); // Where you want to receive
 
         $mail->isHTML(true);
         $mail->Subject = '📬 New Message from Your Portfolio';
